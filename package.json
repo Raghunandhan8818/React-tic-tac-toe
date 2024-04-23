@@ -6,6 +6,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "cypress":"cypress open",
     "eject": "react-scripts eject"
   },
   "dependencies": {
@@ -14,7 +15,8 @@
     "react-scripts": "^5.0.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "cypress": "^13.8.0"
   },
   "browserslist": {
     "production": [

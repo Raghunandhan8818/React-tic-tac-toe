@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function Square({ value, onSquareClick }) {
   return (
-    <button className="square" onClick={onSquareClick}>
+    <button className="square"  data-testid="square" onClick={onSquareClick}>
       {value}
     </button>
   );
@@ -34,7 +34,7 @@ function Board({ xIsNext, squares, onPlay }) {
 
   return (
     <>
-      <div className="status">{status}</div>
+      <div className="status" data-testid="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -76,11 +76,11 @@ export default function Game() {
     if (move > 0) {
       description = 'Go to move #' + move;
     } else {
-      description = 'Go to game start';
+      description = 'Reset';
     }
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button data-testid="game-info-li" onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
